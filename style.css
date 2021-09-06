@@ -1,0 +1,131 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #edeeed;
+
+
+
+}
+
+.gouttes
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.goutte
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-radius: 61% 39% 37% 63% / 51% 62% 38% 49% ;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),
+                15px 25px 10px rgba(0,0,0,0.1),
+                15px 20px 20px rgba(255,255,255,0.5),
+                inset -10px -10px 15px rgba(255,255,255,0.9);
+    animation: opacity 8s linear infinite;
+     opacity:0;
+}
+@keyframes opacity{
+    0%,30%   { opacity: 0.5;}
+    30%,60% { opacity: 0.7;}
+    60%,100% { opacity: 1;}
+}
+
+.goutte::before
+{
+    content: '';
+    position: absolute;
+    top:25px;
+    left:35px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 48% 52% 72% 28% / 43% 40% 60% 57%;
+}
+.goutte::after
+{
+    content: '';
+    position: absolute;
+    top:25px;
+    left:65px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 69% 31% 53% 47% / 38% 40% 60% 62% ;
+}
+
+.goutte:nth-child(2)
+{
+    transform: scale(0.5) translate(-200px,180px);
+    border-radius: 52% 48% 39% 61% / 43% 63% 37% 57% ;
+    animation: opacity 5s linear infinite;
+    opacity:0;
+}
+@keyframes opacity{
+    0%,30%   { opacity: 0.5;}
+    30%,60% { opacity: 0.7;}
+    60%,100% { opacity: 1;}
+}
+.goutte:nth-child(3)
+{
+    transform: scale(0.6) translate(280px,10px);
+    border-radius: 68% 32% 60% 40% / 43% 55% 45% 57%;
+    animation: opacity 7s linear infinite;
+    opacity:0; 
+}
+
+@keyframes opacity{
+    0%,30%   { opacity: 0.5;}
+    30%,60% { opacity: 0.7;}
+    60%,100% { opacity: 1;}
+}
+.goutte:nth-child(4)
+{
+    transform: scale(0.4) translate(120px,-350px);
+    border-radius: 61% 39% 54% 46% / 57% 57% 43% 43%; 
+    animation: opacity 3s linear infinite;
+    opacity:0; 
+}
+
+@keyframes opacity{
+    0%,30%   { opacity: 0.5;}
+    30%,60% { opacity: 0.7;}
+    60%,100% { opacity: 1;}
+}
+.goutte:nth-child(4)::before
+{
+    content: '';
+    position: absolute;
+    top:25px;
+    left:25px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    
+}
+.goutte:nth-child(3)::after
+{
+    content: '';
+    position: absolute;
+    top:15px;
+    left:75px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    
+}
